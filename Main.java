@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[]args){
-    Scanner leia = new Scanner(system.in);
+    Scanner leia = new Scanner(System.in);
 
-    system.out.println("Escreva uma fase: ");
+    System.out.println("Escreva uma fase: ");
     String fraseOriginal = leia.nextLine();
     //Tratamento da frase
     String fraseConvertida = fraseOriginal.toUpperCase();
+    System.out.println(fraseConvertida);
 
     }
 }
