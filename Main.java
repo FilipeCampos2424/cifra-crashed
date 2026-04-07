@@ -7,8 +7,9 @@ public class Main{
     System.out.println("Escreva uma fase: ");
     String fraseOriginal = leia.nextLine();
     //Tratamento da frase
-    String fraseConvertida = fraseOriginal.toUpperCase();
+    String fraseConvertida = fraseOriginal.toUpperCase().replaceAll("\\s", "");
     System.out.println(fraseConvertida);
+
 
     }
 }
