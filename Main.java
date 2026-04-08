@@ -5,15 +5,6 @@ public class Main{
     public static void main(String[]args){
     Scanner leia = new Scanner(System.in);
 
-    System.out.println("CIFRADOR E DECIFRADOR JAVA\n");
-    System.out.println("(1) Cifrador (2) Decifrador\n");
-    System.out.println("Escolha: ");
-    int escolher = leia.nextInt();
-
-    leia.nextLine();
-
-    if (escolher == 1) {
-
     System.out.println("Escreva uma frase: ");
     String fraseOriginal = leia.nextLine();
     //Tratamento da frase
@@ -39,9 +30,20 @@ public class Main{
         //o indice que faz os saltos até o tamanho da string
         indice = (indice + 5) % n;
     }
+    String cifrada = new String(resultado);
+    System.out.println("Cifrada: "+ cifrada);
 
-    System.out.println(resultado);
-      }
+    char original[] = new char[n];
+    indice = 0;
+
+    for (int i = 0; i < n; i++) {
+        original[indice] = cifrada.charAt(i); //pega o char da cifra (i) e coloca na posição correta (indice)
+        indice = (indice + 5) % n; 
+    }
+
+    String decifrada = new String(original);
+    System.out.println("Decifrada: "+ decifrada);
+
 
     }
 }
