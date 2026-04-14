@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.text.Normalizer; //só pra tratar os acentos
+
 
 public class Main{
     public static void main(String[]args){
@@ -8,13 +8,16 @@ public class Main{
     System.out.println("Escreva uma frase: ");
     String fraseOriginal = leia.nextLine();
     //Tratamento da frase
-    //Normalizer usado pra tratar a frase certinho
-    String fraseConvertida = Normalizer.normalize(fraseOriginal, Normalizer.Form.NFD); // o NFD separa o acento da letra
-    fraseConvertida = fraseConvertida.replaceAll("\\p{M}", "") //tira os acentos
-    .replaceAll("[^a-zA-Z0-9]", "").toUpperCase(); //toUpperCase pra deixar tudo maiusculo
-    //ele nao vai escrever nada que nao for de a-z, A-Z ou 0-9
+    String fraseConvertida = fraseOriginal.toLowerCase()
+    .replace("à", "a").replace("â", "a").replace("ã", "a")
+    .replace("é", "e").replace("ê", "e")
+    .replace("í", "i")
+    .replace("ó", "o").replace("ô", "o").replace("õ", "o")
+    .replace("ú", "u")
+    .replace("ç", "c")
+    .replaceAll("[^a-z0-9]", "") // esse aqui remove tudo que não for letra ou número
+    .toUpperCase(); 
 
-    System.out.println(fraseConvertida);
 
     //n pega o tamanho da frase convertida
     int n = fraseConvertida.length();
