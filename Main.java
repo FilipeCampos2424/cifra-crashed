@@ -31,21 +31,11 @@ public class Main{
         //o vetor em for vira igual a frase em char de acordo com o indice
         resultado[i] = fraseConvertida.charAt(indice);
         //o indice que faz os saltos até o tamanho da string
-        indice = (indice + 5) % n;
+        indice = (indice + 3) % n;
     }
     String cifrada = new String(resultado);
     System.out.println("Cifrada: "+ cifrada);
 
-    char original[] = new char[n];
-    indice = 0;
-
-    for (int i = 0; i < n; i++) {
-        original[indice] = cifrada.charAt(i); //pega o char da cifra (i) e coloca na posição correta (indice)
-        indice = (indice + 5) % n; 
-    }
-
-    String decifrada = new String(original);
-    System.out.println("Decifrada: "+ decifrada);
 
 
     }
