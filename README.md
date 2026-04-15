@@ -27,7 +27,7 @@ garantindo que o salto percorra todos os índices sem repetir antes de completar
 **Apresente os 10 primeiros índices visitados pela regra de salto 5 sobre a string de 47
 caracteres, começando do índice 0.**
 
-R: índices visitados (primeiros 10) 0, 5, 10, 15, 20, 25, 30, 35, 40, 45
+R: índices visitados (primeiros 10) 0 (Q), 5 (S), 10(O), 15(A), 20(P), 25(I), 30(N), 35(I), 40(M), 45(I)
 
 
 
